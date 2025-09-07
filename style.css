@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.topnav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topnav a {
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+    color: #333;
+    font-size: 28px;
+    transition: color 0.3s;
+}
+
+.topnav a:hover .material-symbols-outlined {
+    color: #4a6cf7;
+}
+
+.intro-container {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.tech-stack {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.tech-stack h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-icon {
+    font-size: 2rem;
+    width: 40px;
+    margin-right: 15px;
+}
+
+.html { color: #E34F26; }
+.css { color: #1572B6; }
+.js { color: #F7DF1E; }
+.php { color: #777BB4; }
+.python { color: #3776AB; }
+.bootstrap { color: #7952B3; }
+
+.tech-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.project-card {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.github-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #24292E;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.github-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background-color: #2D333B;
+}
+
+.github-btn i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-card {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.contact-text {
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.email-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.email-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.email-btn i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .intro-title {
+        font-size: 2rem;
+    }
+    
+    .intro-text {
+        font-size: 1rem;
+    }
+    
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tech-item {
+        padding: 12px 15px;
+    }
+    
+    .topnav a {
+        margin: 0 10px;
+    }
+    
+    .material-symbols-outlined {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-title {
+        font-size: 1.8rem;
+    }
+    
+    .tech-stack h2, .project-title, .contact-title {
+        font-size: 1.6rem;
+    }
+    
+    .topnav {
+        padding: 15px 0;
+    }
+    
+    .topnav a {
+        margin: 0 8px;
+    }
+    
+    .material-symbols-outlined {
+        font-size: 20px;
+    }
+    
+    .github-btn, .email-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
