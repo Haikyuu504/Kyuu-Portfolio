@@ -119,39 +119,111 @@ body {
 }
 
 .project-card {
-    padding: 60px 20px;
-    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #222;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    position: relative;
+    padding-bottom: 15px;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
-.github-btn {
-    display: inline-flex;
+.project-list {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-list:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.project-info {
+    padding: 40px;
+}
+
+.project-name {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.project-link {
+    display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #24292E;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.demo-button {
+    color: black;
+    font-weight: 500;
+}
+
+.github-button {
+    color: black;
+    font-weight: 500;
+}
+
+.project-info a {
+    color: green;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-left: 8px;
+    transition: color 0.2s ease;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
-.github-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-    background-color: #2D333B;
+.project-info a:hover {
+    color: #c0392b;
+    background-color: #f9f9f9;
 }
 
-.github-btn i {
-    margin-right: 10px;
+@media (max-width: 768px) {
+.project-title {
+    font-size: 2rem;
+}
+.project-grid {
+    gap: 20px;
+}
+.project-info {
+    padding: 15px;
+}
+.project-name {
     font-size: 1.2rem;
+ }
+}
+@media (max-width: 480px) {
+.project-card {
+     padding: 20px 10px;
+}
+.project-title {
+     font-size: 1.8rem;
+     margin-bottom: 30px;
+}
+.project-grid {
+     grid-template-columns: 1fr;
+}
+.project-link {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.project-info a {
+    margin-left: 0;
+ }
 }
 
 .contact-card {
